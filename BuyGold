@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract GoldBuying {
+    uint256 constant private MIN_GOLD_AMOUNT = 6000; // Minimum amount of gold to buy
+    uint256 constant private FREE_MEMBERSHIP_THRESHOLD = 100; // Grams of gold required for free membership
+
+    function CaratsAvailability(uint256 carrot) public pure {
+        assert(carrot >= 18 && carrot <= 22);
+    }
+
+    function buyGold(uint256 amount) public pure {
+        require(amount >= MIN_GOLD_AMOUNT, "Minimum amount of gold to buy is 6000");
+        
+       
+    }
+function goldgram(uint256 gram) public pure {  if (gram >= FREE_MEMBERSHIP_THRESHOLD) {
+            revert("Free membership is provided");
+        }}
+    function purchaseGold(uint256 grams) public pure returns(string memory) {
+        buyGold(grams);
+        return "Purchase successful";
+    }
+}
